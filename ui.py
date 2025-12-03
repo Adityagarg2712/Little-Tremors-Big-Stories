@@ -1,4 +1,4 @@
-# ui.py (ChatGPT Helped Create This File)
+# ui.py 
 
 from __future__ import annotations # Allows type hints that reference classes before they are defined.
 
