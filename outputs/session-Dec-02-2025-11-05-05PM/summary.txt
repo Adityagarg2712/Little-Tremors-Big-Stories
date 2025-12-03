@@ -1,0 +1,45 @@
+🌟 Quick summary
+Most similar synthetic profile: typical / healthy (0.9996713484233153)
+Button comfort: Big and medium buttons should feel comfortable. Very tiny buttons may still be annoying.
+
+🎯 Button sizes – model vs your data
+   64px buttons: model P(hit) ≈ 1.0 | your data: 9/9 hits (1.0)
+   48px buttons: model P(hit) ≈ 1.0 | your data: 9/9 hits (1.0)
+   32px buttons: model P(hit) ≈ 0.9999999973307286 | your data: 9/9 hits (1.0)
+   24px buttons: model P(hit) ≈ 0.9999849566031448 | your data: 9/9 hits (1.0)
+   20px buttons: model P(hit) ≈ 0.9995523540480233 | your data: 9/9 hits (1.0)
+   16px buttons: model P(hit) ≈ 0.9928121636052345 | your data: 9/9 hits (1.0)
+   14px buttons: model P(hit) ≈ 0.9771462230627014 | your data: 9/9 hits (1.0)
+   12px buttons: model P(hit) ≈ 0.9377217388666976 | your data: 8/9 hits (0.8888888888888888)
+
+🔬 Movement features (estimates to 3 decimals)
+  Line deviation SD (px):            1.513
+  Line zero-crossing freq (/sec):    0.510
+  Angle jitter SD (rad):             0.670
+  Step size variance:                1.159
+  Radial deviation SD (px):          33.773
+  Click error SD (px):               2.546
+
+Posterior over synthetic motor profiles (Gaussian Naive Bayes):
+  robot-perfect: 4.02318013315261e-09
+  typical / healthy: 0.9996713484233153
+  mild tremor-like: 0.00032843467298931516
+  impaired access: 2.1288051531703006e-07
+
+Interpretation notes:
+- Lower variability (especially line deviation and jitter) looks more robot-like. Higher variability is very human and can reflect many things:
+  mouse vs trackpad, stress, tiredness, caffeine, cold hands, tremor, and other motor conditions.
+- These categories are synthetic examples, not diagnoses yet. The point is to see how random variables and Bayes' rule can describe motor noise.
+
+♿ Accessibility reflection
+Based on your estimated click error noise (SD ≈ 2.546 px), the Rayleigh model suggests roughly:
+  • ~ 64px buttons: success (P(hit)) ≈ 1.0
+  • ~ 48px buttons: success (P(hit)) ≈ 1.0
+  • ~ 32px buttons: success (P(hit)) ≈ 0.9999999973307286
+  • ~ 24px buttons: success (P(hit)) ≈ 0.9999849566031448
+  • ~ 20px buttons: success (P(hit)) ≈ 0.9995523540480233
+  • ~ 16px buttons: success (P(hit)) ≈ 0.9928121636052345
+  • ~ 14px buttons: success (P(hit)) ≈ 0.9771462230627014
+  • ~ 12px buttons: success (P(hit)) ≈ 0.9377217388666976
+
+Interfaces that rely heavily on tiny click targets implicitly expect low motor noise. Users with higher variability (including tremor, disabilities, or just a finicky touchpad) will have a systematically worse experience.
