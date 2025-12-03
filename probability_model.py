@@ -1,4 +1,4 @@
-# probability_model.py (ChatGPT gave some ideas on implementation, but most of the code here is original)
+# probability_model.py 
 
 from __future__ import annotations # Allows type hints that reference classes before they are defined.
 
